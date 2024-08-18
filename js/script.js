@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
   orderButtons.forEach(function (button) {
     button.addEventListener("click", function (event) {
       if (!isLoggedIn) {
-        window.location.assign("./login.html");
+        window.location.assign("../login.html");
       } else {
         window.location.assign("./orders.html");
       }
@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
     button.addEventListener("click", function (event) {
       if (!isLoggedIn) {
         event.preventDefault();
-        window.location.assign("./login.html");
+        window.location.assign("../login.html");
       } else {
         window.location.assign("./cart.html");
       }
@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
     button.addEventListener("click", function (event) {
       if (!isLoggedIn) {
         event.preventDefault();
-        window.location.assign("./login.html");
+        window.location.assign("../login.html");
       } else {
         window.location.assign("./wishlist.html");
       }
@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Preventing going to login or register page if user is logged in
 document.addEventListener("DOMContentLoaded", function () {
   const isLoggedIn = localStorage.getItem("isLoggedIn");
-  const loginButtons = document.querySelectorAll(".loginLink");
+  const loginButtons = document.querySelectorAll("..loginLink");
   const registerButtons = document.querySelectorAll(".registerLink");
 
   loginButtons.forEach(function (button) {
@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
         window.alert("To log in again please log out first");
       } else {
-        window.location.assign("./login.html");
+        window.location.assign("../login.html");
       }
     });
   });
@@ -339,7 +339,7 @@ function save() {
     usersList.push(newUser);
 
     localStorage.setItem("usersList", JSON.stringify(usersList));
-    window.location.assign("./login.html");
+    window.location.assign("../login.html");
     return true;
   }
 }
