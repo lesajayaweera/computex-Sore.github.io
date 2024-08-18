@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Computex</title>
+
+  <!-- shortcut icon link -->
+  <link rel="shortcut icon" href="./assets/media/Logos/Logo_2.png" />
+
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+  <!-- custom css file link  -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- custom js file link -->
+  <script src="js/script.js" defer></script>
+
+</head>
+
+<body>
+  <header class="header">
+    <section class="flex align">
+      <a href="home.html" class="logo align">
+        <img src="./assets/media/Logos/Logo_1.png" alt="logo" />
+      </a>
+
+      <nav class="navbar">
+        <a href="home.html">Home</a>
+        <a href="laptops.html">Laptops</a>
+        <a href="parts.html">Parts</a>
+        <a href="monitors.html">Monitors</a>
+        <a href="accessories.html">Accessories</a>
+        <a href="games.html">Games</a>
+        <a href="about.html">About</a>
+      </nav>
+
+      <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <a href="search-page.html"><i class="fas fa-search"></i></a>
+        <div id="theme-btn" class="fa-solid fa-circle-half-stroke" onclick="themeSwitch()"></div>
+        <div id="user-btn" class="fas fa-user"></div>
+      </div>
+
+      <div class="profile">
+        <div class="flex-btn icons">
+          <a href="wishlist.html" id="diss-btn">
+            <i class="fas fa-heart"></i>
+            <span id="wishlistCount">()</span>
+          </a>
+
+          <a href="cart.html" id="diss-btn" onclick="saveCart()">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cartCount">()</span>
+          </a>
+        </div>
+        <a href="update_user.html" class="fadeRedBg btn" id="diss-btn">update profile</a>
+        <a href="orders.html" class="fadeRedBg btn" id="diss-btn">orders</a>
+        <div class="flex-btn">
+          <a href="register.html" class="fadeRedBg option-btn">register</a>
+          <a href="login.html" class="fadeRedBg option-btn">login</a>
+        </div>
+        <a class="fadeRedBg btn" id="diss-btn" onclick="logout()">logout</a>
+      </div>
+    </section>
+  </header>
+
+  <section class="products">
+    <h1 class="fadeRedText heading">Parts</h1>
+
+    <div class="box-container">
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Parts/G.SKILL_Trident_Z_RGB.png" alt="" />
+        <div class="name">G.SKILL Trident Z RGB</div>
+        <div class="flex">
+          <div class="price">
+            <span>$74.99</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99"
+            onkeypress="if(this.value.length == 2) return false;" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn"  onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Parts/G.SKILL_Ripjaws_V_Series.png " alt="" />
+        <div class="name">G.SKILL Ripjaws V Series</div>
+        <div class="flex">
+          <div class="price">
+            <span>$47.99</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99"
+            onkeypress="if(this.value.length == 2) return false;" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn"  onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Parts/CORSAIR_Vengeance_RGB_Pro.png" alt="" />
+        <div class="name">CORSAIR Vengeance RGB Pro</div>
+        <div class="flex">
+          <div class="price">
+            <span>$72.99</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99"
+            onkeypress="if(this.value.length == 2) return false;" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn"  onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Parts/Team_T-Force_Delta_RGB.png" alt="" />
+        <div class="name">Team T-Force Delta RGB</div>
+        <div class="flex">
+          <div class="price">
+            <span>$62.99</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99"
+            onkeypress="if(this.value.length == 2) return false;" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn"  onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Parts/Patriot_Viper_3.png" alt="" />
+        <div class="name">Patriot Viper 3</div>
+        <div class="flex">
+          <div class="price">
+            <span>$39.99</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99"
+            onkeypress="if(this.value.length == 2) return false;" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn"  onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Parts/AMD_Ryzen_7_5700X.png" alt="" />
+        <div class="name">AMD Ryzen 7 5700X</div>
+        <div class="flex">
+          <div class="price">
+            <span>$209.00</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99"
+            onkeypress="if(this.value.length == 2) return false;" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn"  onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Parts/AMD_Ryzen_5_7600X.png" alt="" />
+        <div class="name">AMD Ryzen 5 7600X</div>
+        <div class="flex">
+          <div class="price">
+            <span>$299.00</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99"
+            onkeypress="if(this.value.length == 2) return false;" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn"  onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Parts/Intel_Core_i7-12700K.png" alt="" />
+        <div class="name">Intel Core i7-12700K</div>
+        <div class="flex">
+          <div class="price">
+            <span>$310.99</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99"
+            onkeypress="if(this.value.length == 2) return false;" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn"  onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Parts/AMD_Ryzen_7_5800X3D.png" alt="" />
+        <div class="name">AMD Ryzen 7 5800X3D</div>
+        <div class="flex">
+          <div class="price">
+            <span>$369.99</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99"
+            onkeypress="if(this.value.length == 2) return false;" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn"  onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Parts/AMD_Ryzen_9_7950X.png" alt="" />
+        <div class="name">AMD Ryzen 9 7950X</div>
+        <div class="flex">
+          <div class="price">
+            <span>$573.99</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99"
+            onkeypress="if(this.value.length == 2) return false;" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn"  onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Parts/EVGA_GeForce_RTX_3080_Ti_FTW3_ULTRA.png" alt="" />
+        <div class="name">EVGA GeForce RTX 3080 Ti FTW3 ULTRA</div>
+        <div class="flex">
+          <div class="price">
+            <span>$1,580.00</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99"
+            onkeypress="if(this.value.length == 2) return false;" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn"  onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Parts/ASUS_ROG_GeForce_RTX_4080.png" alt="" />
+        <div class="name">ASUS ROG GeForce RTX 4080</div>
+        <div class="flex">
+          <div class="price">
+            <span>$1,660.00</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99"
+            onkeypress="if(this.value.length == 2) return false;" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn"  onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Parts/MSI_GAMING_X_TRIO_RTX_4080.png" alt="" />
+        <div class="name">MSI GAMING X TRIO RTX 4080</div>
+        <div class="flex">
+          <div class="price">
+            <span>$1,619.99</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99"
+            onkeypress="if(this.value.length == 2) return false;" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn"  onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Parts/ASUS_TUF_Gaming_GeForce_RTX_4080.png" alt="" />
+        <div class="name">ASUS TUF Gaming GeForce RTX 4080</div>
+        <div class="flex">
+          <div class="price">
+            <span>$1,399.99</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99"
+            onkeypress="if(this.value.length == 2) return false;" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn"  onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Parts/GIGABYTE_AORUS_GeForce_RTX_4090.png" alt="" />
+        <div class="name">GIGABYTE AORUS GeForce RTX 4090</div>
+        <div class="flex">
+          <div class="price">
+            <span>$2,494.99</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99"
+            onkeypress="if(this.value.length == 2) return false;" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn"  onclick="cart(event)" name="add_to_cart" />
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <section class="grid">
+      <div class="box">
+        <h3>Quick links</h3>
+        <a href="home.html"><i class="fas fa-angle-right"></i>Home</a>
+        <a href="laptops.html"><i class="fas fa-angle-right"></i>Laptops</a>
+        <a href="parts.html"><i class="fas fa-angle-right"></i>Parts</a>
+        <a href="monitors.html"><i class="fas fa-angle-right"></i>Monitors</a>
+        <a href="accessories.html"><i class="fas fa-angle-right"></i>Accessories</a>
+        <a href="games.html"><i class="fas fa-angle-right"></i>Games</a>
+        <a href="about.html"><i class="fas fa-angle-right"></i>About</a>
+      </div>
+
+      <div class="box">
+        <h3>Account Information</h3>
+        <button class="loginLink" href="login.html"><i class="fas fa-angle-right"></i> Login</button>
+        <button class="registerLink" href="register.html"><i class="fas fa-angle-right"></i> Register</button>
+        <button class="orderLink"><i class="fas fa-angle-right"></i> Orders</button>
+        <button class="cartLink"><i class="fas fa-angle-right"></i> Cart</button>
+        <button class="wishlistLink"><i class="fas fa-angle-right"></i> Wishlist</button>
+      </div>
+
+      <div class="box">
+        <h3>Contact us</h3>
+        <a href="">Working Hours:</a>
+        <a href="">Weekdays: 9-6</a>
+        <a href="">Weekends: 10-5</a>
+        <a href="">info@computex.com</a>
+      </div>
+    </section>
+
+    <div class="credit">©Computex RETAIL LCC. All rights reserved</div>
+  </footer>
+</body>
+
+</html>

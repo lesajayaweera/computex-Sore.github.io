@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Computex</title>
+
+  <!-- shortcut icon link -->
+  <link rel="shortcut icon" href="./assets/media/Logos/Logo_2.png" />
+
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+  <!-- custom css file link  -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- custom js file link -->
+  <script src="js/script.js" defer></script>
+
+</head>
+
+<body>
+  <header class="header">
+    <section class="flex align">
+      <a href="home.html" class="logo align">
+        <img src="./assets/media/Logos/Logo_1.png" alt="logo" />
+      </a>
+
+      <nav class="navbar">
+        <a href="home.html">Home</a>
+        <a href="laptops.html">Laptops</a>
+        <a href="parts.html">Parts</a>
+        <a href="monitors.html">Monitors</a>
+        <a href="accessories.html">Accessories</a>
+        <a href="games.html">Games</a>
+        <a href="about.html">About</a>
+      </nav>
+
+      <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <a href="search-page.html"><i class="fas fa-search"></i></a>
+        <div id="theme-btn" class="fa-solid fa-circle-half-stroke" onclick="themeSwitch()"></div>
+        <div id="user-btn" class="fas fa-user"></div>
+      </div>
+
+      <div class="profile">
+        <div class="flex-btn icons">
+          <a href="wishlist.html" id="diss-btn">
+            <i class="fas fa-heart"></i>
+            <span id="wishlistCount">()</span>
+          </a>
+
+          <a href="cart.html" id="diss-btn" onclick="saveCart()">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cartCount">()</span>
+          </a>
+        </div>
+        <a href="update_user.html" class="fadeRedBg btn" id="diss-btn">update profile</a>
+        <a href="orders.html" class="fadeRedBg btn" id="diss-btn">orders</a>
+        <div class="flex-btn">
+          <a href="register.html" class="fadeRedBg option-btn">register</a>
+          <a href="login.html" class="fadeRedBg option-btn">login</a>
+        </div>
+        <a class="fadeRedBg btn" id="diss-btn" onclick="logout()">logout</a>
+      </div>
+    </section>
+  </header>
+
+  <section class="products">
+    <h1 class="fadeRedText heading">Laptops</h1>
+
+    <div class="box-container">
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Laptop/ASUS_Vivobook_S_14X.png" alt="" />
+        <div class="name">ASUS Vivobook S 14X</div>
+        <div class="type">Laptop</div>
+        <div class="flex">
+          <div class="price">
+            <span>$699.99</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn"  onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Laptop/ASUS_ZenBook_Pro_15.png " alt="" />
+        <div class="name">ASUS ZenBook Pro 15</div>
+        <div class="type">Laptop</div>
+        <div class="flex">
+          <div class="price">
+            <span>$999.99</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn"  onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Laptop/Lenovo_ThinkPad_X1_Nano.png" alt="" />
+        <div class="name">Lenovo ThinkPad X1 Nano</div>
+        <div class="type">Laptop</div>
+        <div class="flex">
+          <div class="price">
+            <span>$549.99</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn"  onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Laptop/MSI_Prestige_14Evo.png" alt="" />
+        <div class="name">MSI Prestige 14Evo</div>
+        <div class="type">Laptop</div>
+        <div class="flex">
+          <div class="price">
+            <span>$879.00</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn"  onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Laptop/Lenovo_Laptop_IdeaPad_3.png" alt="" />
+        <div class="name">Lenovo IdeaPad 3</div>
+        <div class="type">Laptop</div>
+        <div class="flex">
+          <div class="price">
+            <span>$499.99</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn"  onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Laptop/Lenovo_IdeaPad_Flex_5.png" alt="" />
+        <div class="name">Lenovo IdeaPad Flex 5</div>
+        <div class="type">Laptop</div>
+        <div class="flex">
+          <div class="price">
+            <span>$599.99</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn"  onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Laptop/ASUS_VivoBook_13_Slate.png" alt="" />
+        <div class="name">ASUS VivoBook 13 Slate</div>
+        <div class="type">Laptop</div>
+        <div class="flex">
+          <div class="price">
+            <span>$549.99</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn"  onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Laptop/Microsoft_Surface_Pro_8.png" alt="" />
+        <div class="name">Microsoft Surface Pro 8</div>
+        <div class="type">Laptop</div>
+        <div class="flex">
+          <div class="price">
+            <span>$1,079.00</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn"  onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Laptop/MSI_Summit_E16FlipEvo.png" alt="" />
+        <div class="name">MSI Summit E16FlipEvo</div>
+        <div class="type">Laptop</div>
+        <div class="flex">
+          <div class="price">
+            <span>$1,449.00</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn"  onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Laptop/HP_ENVY_x360.png" alt="" />
+        <div class="name">HP ENVY x360</div>
+        <div class="type">Laptop</div>
+        <div class="flex">
+          <div class="price">
+            <span>$669.99</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99"
+            onkeypress="if(this.value.length == 2) return false;" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn"  onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Laptop/MSI_Katana_GF66.png" alt="" />
+        <div class="name">MSI Katana GF66</div>
+        <div class="type">Laptop</div>
+        <div class="flex">
+          <div class="price">
+            <span>$1199.00</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99"
+            onkeypress="if(this.value.length == 2) return false;" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn"  onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Laptop/ASUS_ROG_Strix_Scar_15.png" alt="" />
+        <div class="name">ASUS ROG Strix Scar 15</div>
+        <div class="type">Laptop</div>
+        <div class="flex">
+          <div class="price">
+            <span>$2229.00</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99"
+            onkeypress="if(this.value.length == 2) return false;" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn"  onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Laptop/Lenovo_IdeaPad_Gaming_3.png" alt="" />
+        <div class="name">Lenovo IdeaPad Gaming 3 15IAH7</div>
+        <div class="type">Laptop</div>
+        <div class="flex">
+          <div class="price">
+            <span>$1099.99</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99"
+            onkeypress="if(this.value.length == 2) return false;" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn"  onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Laptop/Aorus_15P_XD-73.png" alt="" />
+        <div class="name">Aorus 15P XD-73</div>
+        <div class="type">Laptop</div>
+        <div class="flex">
+          <div class="price">
+            <span>$1279.99</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99"
+            onkeypress="if(this.value.length == 2) return false;" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn"  onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Laptop/GIGABYTE_AERO_5_XE4.png" alt="" />
+        <div class="name">GIGABYTE AERO 5 XE4</div>
+        <div class="type">Laptop</div>
+        <div class="flex">
+          <div class="price">
+            <span>$1479.99</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99"
+            onkeypress="if(this.value.length == 2) return false;" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn"  onclick="cart(event)" name="add_to_cart" />
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <section class="grid">
+      <div class="box">
+        <h3>Quick links</h3>
+        <a href="home.html"><i class="fas fa-angle-right"></i>Home</a>
+        <a href="laptops.html"><i class="fas fa-angle-right"></i>Laptops</a>
+        <a href="parts.html"><i class="fas fa-angle-right"></i>Parts</a>
+        <a href="monitors.html"><i class="fas fa-angle-right"></i>Monitors</a>
+        <a href="accessories.html"><i class="fas fa-angle-right"></i>Accessories</a>
+        <a href="games.html"><i class="fas fa-angle-right"></i>Games</a>
+        <a href="about.html"><i class="fas fa-angle-right"></i>About</a>
+      </div>
+
+      <div class="box">
+        <h3>Account Information</h3>
+        <button class="loginLink" href="login.html"><i class="fas fa-angle-right"></i> Login</button>
+        <button class="registerLink" href="register.html"><i class="fas fa-angle-right"></i> Register</button>
+        <button class="orderLink"><i class="fas fa-angle-right"></i> Orders</button>
+        <button class="cartLink"><i class="fas fa-angle-right"></i> Cart</button>
+        <button class="wishlistLink"><i class="fas fa-angle-right"></i> Wishlist</button>
+      </div>
+
+      <div class="box">
+        <h3>Contact us</h3>
+        <a href="">Working Hours:</a>
+        <a href="">Weekdays: 9-6</a>
+        <a href="">Weekends: 10-5</a>
+        <a href="">info@computex.com</a>
+      </div>
+    </section>
+
+    <div class="credit">©Computex RETAIL LCC. All rights reserved</div>
+  </footer>
+</body>
+
+</html>

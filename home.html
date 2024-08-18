@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Computex</title>
+
+  <!-- shortcut icon link -->
+  <link rel="shortcut icon" href="./assets/media/Logos/Logo_2.png" />
+
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+  <!-- custom css file link  -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- custom js file link -->
+  <script src="js/script.js" defer></script>
+
+</head>
+
+<body>
+  <header class="header">
+    <section class="flex align">
+      <a href="home.html" class="logo align">
+        <img src="./assets/media/Logos/Logo_1.png" alt="logo" />
+      </a>
+
+      <nav class="navbar">
+        <a href="home.html">Home</a>
+        <a href="laptops.html">Laptops</a>
+        <a href="parts.html">Parts</a>
+        <a href="monitors.html">Monitors</a>
+        <a href="accessories.html">Accessories</a>
+        <a href="games.html">Games</a>
+        <a href="about.html">About</a>
+      </nav>
+
+      <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <a href="search-page.html"><i class="fas fa-search"></i></a>
+        <div id="theme-btn" class="fa-solid fa-circle-half-stroke" onclick="themeSwitch()"></div>
+        <div id="user-btn" class="fas fa-user"></div>
+      </div>
+
+      <div class="profile">
+        <div class="flex-btn icons">
+          <a href="wishlist.html" id="diss-btn">
+            <i class="fas fa-heart"></i>
+            <span id="wishlistCount">()</span>
+          </a>
+
+          <a href="cart.html" id="diss-btn" onclick="saveCart()">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cartCount">()</span>
+          </a>
+        </div>
+        <a href="update_user.html" class="fadeRedBg btn" id="diss-btn">update profile</a>
+        <a href="orders.html" class="fadeRedBg btn" id="diss-btn">orders</a>
+        <div class="flex-btn">
+          <a href="register.html" class="fadeRedBg option-btn">register</a>
+          <a href="login.html" class="fadeRedBg option-btn">login</a>
+        </div>
+        <a class="fadeRedBg btn" id="diss-btn" onclick="logout()">logout</a>
+      </div>
+    </section>
+  </header>
+
+  <div class="featContent" style="margin-block: 2.5%">
+    <div class="bigFeaturedProduct">
+      <div class="bigProduct">
+        <img src="./assets/media/Home/Sony WH-1000XM4.png" class="align" />
+        <div class="align bigFeat">
+          <p style="
+                  font-size: xx-large;
+                  font-weight: bold;
+                  text-align: center;
+                ">
+            Sony WH-1000XM4
+          </p>
+          <p style="
+                  font-size: x-large;
+                  font-weight: bold;
+                  text-align: center;
+                  margin-block: 1rem;
+                ">
+            $275.00
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="smallerFeaturedProducts">
+      <div id="smallProductHidden">
+        <div class="smallProduct">
+          <img src="./assets/media/Home/Sony WH-1000XM4 2.png" class="align" />
+          <div class="align smallFeat">
+            <p id="smallTitle">Sony WH-1000XM4</p>
+            <p id="smallPrice">$275.00</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="smallProduct">
+        <img src="./assets/media/Home/GIGABYTE_AERO_16_XE5.png" class="align" />
+        <div class="align smallFeat">
+          <p id="smallTitle">Gigabyte Aero 16 XE5</p>
+          <p id="smallPrice">$1,299.00</p>
+        </div>
+      </div>
+
+      <div class="smallProduct">
+        <img src="./assets/media/Home/Keychron K2.png" class="align" />
+        <div class="align smallFeat">
+          <p id="smallTitle">Keychron K2</p>
+          <p id="smallPrice">$89.00</p>
+        </div>
+      </div>
+
+      <div class="smallProduct">
+        <img src="./assets/media/Home/Logitech Desk Mat.png" class="align" />
+        <div class="align smallFeat">
+          <p id="smallTitle">Logitech Desk Mat</p>
+          <p id="smallPrice">$19.00</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="products ">
+    <h1 class="fadeRedText heading">SALES</h1>
+
+    <div class="box-container ">
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Home/Patriot RAM.png" alt="" />
+        <div class="name">Patriot Viper Steel 32GB (2 x 16GB)</div>
+        <div class="type">RAM</div>
+        <div class="flex">
+          <div class="price">
+            <p class="sale">$89.99</p>
+            <span>$79.00</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn" onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Home/GIGABYTE G27QC.png " alt="" />
+        <div class="name">GIGABYTE G27QC 27" 165Hz Curved Monitor</div>
+        <div class="type">Monitor</div>
+        <div class="flex">
+          <div class="price">
+            <p class="sale">$300</p>
+            <span>$279.99</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn" onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Home/Samsung SSD.png" alt="" />
+        <div class="name">SAMSUNG 970 EVO PLUS M.2 2280 1TB</div>
+        <div class="type">SSD, Storage</div>
+        <div class="flex">
+          <div class="price">
+            <p class="sale">$139.99</p>
+            <span>$89.00</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn" onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Home/SONY WF-1000.png" alt="" />
+        <div class="name">Sony WF-1000XM4Truly Wireless Earbuds</div>
+        <div class="type">Earbuds</div>
+        <div class="flex">
+          <div class="price">
+            <p class="sale">$249.99</p>
+            <span>$179.00</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn" onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+
+    </div>
+  </section>
+
+  <section class="products">
+    <h1 class="fadeRedText heading">NEWEST RELEASES</h1>
+
+    <div class="box-container">
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Home/COD MW2.png " alt="" />
+        <div class="name">Call Of Duty Modern Warfare 2</div>
+        <div class="type">Game</div>
+        <div class="flex">
+          <div class="price">
+            <span>$89.99</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn" onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Home/Corsair K60.png" alt="" />
+        <div class="name">Corsair K60 RGB Pro SE</div>
+        <div class="type">Keyboard</div>
+        <div class="flex">
+          <div class="price">
+            <span>$99.99</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn" onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Home/GOW Ragnarok.png " alt="" />
+        <div class="name">God of War Ragnarok</div>
+        <div class="type">Game</div>
+        <div class="flex">
+          <div class="price">
+            <span>$69.99</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn" onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Home/Lenovo Legion 5 Pro.png " alt="" />
+        <div class="name">Lenovo Legion 5 Pro</div>
+        <div class="type">Laptop</div>
+        <div class="flex">
+          <div class="price">
+            <span>$1399.99</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn" onclick="cart(event)" name="add_to_cart" />
+      </div>
+    </div>
+  </section>
+
+  <section class="products">
+    <h1 class="fadeRedText heading">Most Popular</h1>
+
+    <div class="box-container">
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Home/Ryzen 5 5600.png" alt="" />
+        <div class="name">AMD Ryzen 5 5600</div>
+        <div class="type">Processor, CPU</div>
+        <div class="flex">
+          <div class="price">
+            <span>$139.99</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn" onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Home/DOOM.png " alt="" />
+        <div class="name">DOOM</div>
+        <div class="type">Game</div>
+        <div class="flex">
+          <div class="price">
+            <span>$17.99</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn" onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Home/Acer.png" alt="" />
+        <div class="name">Acer EK240Q 24" Monitor</div>
+        <div class="type">Monitor</div>
+        <div class="flex">
+          <div class="price">
+            <span>$99.99</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn" onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+      <div class="box">
+        <button class="fas fa-heart" type="submit" name="add_to_wishlist" onclick="wishlist(event)"></button>
+        <img src="./assets/media/Home/Logitech G502 hero.png " alt="" />
+        <div class="name">Logitech G502 HERO</div>
+        <div class="type">Mouse</div>
+        <div class="flex">
+          <div class="price">
+            <span>$34.99</span>
+          </div>
+          <input type="number" name="qty" class="qty" min="1" max="99" value="1" />
+        </div>
+        <input type="submit" value="add to cart" class="fadeRedBg btn" onclick="cart(event)" name="add_to_cart" />
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <section class="grid">
+      <div class="box">
+        <h3>Quick links</h3>
+        <a href="home.html"><i class="fas fa-angle-right"></i>Home</a>
+        <a href="laptops.html"><i class="fas fa-angle-right"></i>Laptops</a>
+        <a href="parts.html"><i class="fas fa-angle-right"></i>Parts</a>
+        <a href="monitors.html"><i class="fas fa-angle-right"></i>Monitors</a>
+        <a href="accessories.html"><i class="fas fa-angle-right"></i>Accessories</a>
+        <a href="games.html"><i class="fas fa-angle-right"></i>Games</a>
+        <a href="about.html"><i class="fas fa-angle-right"></i>About</a>
+      </div>
+
+      <div class="box">
+        <h3>Account Information</h3>
+        <button class="loginLink" href="login.html"><i class="fas fa-angle-right"></i> Login</button>
+        <button class="registerLink" href="register.html"><i class="fas fa-angle-right"></i> Register</button>
+        <button class="orderLink"><i class="fas fa-angle-right"></i> Orders</button>
+        <button class="cartLink"><i class="fas fa-angle-right"></i> Cart</button>
+        <button class="wishlistLink"><i class="fas fa-angle-right"></i> Wishlist</button>
+      </div>
+
+      <div class="box">
+        <h3>Contact us</h3>
+        <a href="">Working Hours:</a>
+        <a href="">Weekdays: 9-6</a>
+        <a href="">Weekends: 10-5</a>
+        <a href="">info@computex.com</a>
+      </div>
+    </section>
+
+    <div class="credit">©Computex RETAIL LCC. All rights reserved</div>
+  </footer>
+</body>
+
+</html>

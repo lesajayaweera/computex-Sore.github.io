@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Computex</title>
+
+  <!-- shortcut icon link -->
+  <link rel="shortcut icon" href="./assets/media/Logos/Logo_2.png" />
+
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+  <!-- custom css file link  -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- custom js file link -->
+  <script src="js/script.js" defer></script>
+
+</head>
+
+<body>
+  <header class="header">
+    <section class="flex align">
+      <a href="home.html" class="logo align">
+        <img src="./assets/media/Logos/Logo_1.png" alt="logo" />
+      </a>
+
+      <nav class="navbar">
+        <a href="home.html">Home</a>
+        <a href="laptops.html">Laptops</a>
+        <a href="parts.html">Parts</a>
+        <a href="monitors.html">Monitors</a>
+        <a href="accessories.html">Accessories</a>
+        <a href="games.html">Games</a>
+        <a href="about.html">About</a>
+      </nav>
+
+      <div class="icons">
+        <a href="search-page.html"><i class="fas fa-search"></i></a>
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div id="theme-btn" class="fa-solid fa-circle-half-stroke" onclick="themeSwitch()"></div>
+        <div id="user-btn" class="fas fa-user"></div>
+      </div>
+
+      <div class="profile">
+        <div class="flex-btn icons">
+          <a href="wishlist.html" id="diss-btn">
+            <i class="fas fa-heart"></i>
+            <span id="wishlistCount">()</span>
+          </a>
+
+          <a href="cart.html" id="diss-btn" onclick="saveCart()">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cartCount">()</span>
+          </a>
+        </div>
+        <a href="update_user.html" class="fadeRedBg btn" id="diss-btn">update profile</a>
+        <a href="orders.html" class="fadeRedBg btn" id="diss-btn">orders</a>
+        <div class="flex-btn">
+          <a href="register.html" class="fadeRedBg option-btn">register</a>
+          <a href="login.html" class="fadeRedBg option-btn">login</a>
+        </div>
+        <a class="fadeRedBg btn" id="diss-btn" onclick="logout()">logout</a>
+      </div>
+    </section>
+  </header>
+
+  <div class="banner">
+    <img src="./assets/media/About-us/about banner.jpg" alt="banner" />
+  </div>
+
+  <!--About Us Text-->
+  <div class="aboutDivOuter">
+    <div class="aboutDivInner">
+      <h1 class="heading">Computex</h1>
+      <p>Founded in 1998, Computex began selling PC components and helped popularize the
+        PC-building movement, and in doing so, developed a cult following among PC and DIY enthusiasts. Since then,
+        Computex Inc. is the leading tech-focused e-retailer
+        in North America, with a global reach in Europe, South America, Asia Pacific and the Middle East. Today,
+        millions of customers turn to Computex to shop for the latest PC components, consumer electronics, smart home
+        and gaming products.
+        Computex is consistently ranked as one of the best online shopping destinations, and the company regularly
+        earns industry-leading customer service ratings. Computex is headquartered in City of Industry, California,
+        with North American
+        distribution facilities located throughout the United States and Canada.</p>
+    </div>
+  </div>
+
+  <section class="contact form-container">
+    <div class="form">
+      <h3 class="fadeRedText heading">Get in touch</h3>
+      <input type="text" name="name" required maxlength="20" class="box" placeholder="Name">
+      <ul class="validationDeclaration">
+        <li>Only letters can be used</li>
+      </ul>
+      <input type="email" name="email" required maxlength="50" class="box" placeholder="Email">
+      <ul class="validationDeclaration">
+        <li>Must have one and only one @</li>
+        <li>Allowed characters: letters (a-z), numbers, underscores, periods, and dashes.</li>
+        <li>An underscore, period, or dash must be followed by one or more letter or number.</li>
+        <li>The last portion of the domain must be at least two characters, for example: .com, .org, .cc</li>
+      </ul>
+      <input type="number" name="number" min="0" max="9999999999" required
+        onkeypress="if(this.value.length == 10) return false;" class="box" placeholder="Number">
+      <ul class="validationDeclaration">
+        <li>Only numbers can be used</li>
+      </ul>
+      <textarea name="msg" class="box" cols="30" rows="10" placeholder="Message"></textarea>
+      <button type="button" name="send" class="fadeRedBg btn" onclick="contactUs(event)">Send Message</button>
+    </div>
+  </section>
+
+  <section class="products about">
+    <h1 class="fadeRedText heading">Meet the Team</h1>
+
+    <div class="box-container">
+
+      <div class="box">
+        <img src="./assets/media/About-us/Icon.png" alt="">
+        <h2>Sandro Jvarsheishvili</h2>
+        <h3>Front-end Developer</h3>
+      </div>
+      <div class="box">
+        <img src="./assets/media/About-us/Icon.png" alt="">
+        <h2>Sandro Jvarsheishvili</h2>
+        <h3>Graphical Designer</h3>
+      </div>
+      <div class="box">
+        <img src="./assets/media/About-us/Icon.png" alt="">
+        <h2>Sandro Jvarsheishvili</h2>
+        <h3>Lead Creative</h3>
+      </div>
+      <div class="box">
+        <img src="./assets/media/About-us/Icon.png" alt="">
+        <h2>Sandro Jvarsheishvili</h2>
+        <h3>Digital Project Manager</h3>
+      </div>
+      <div class="box">
+        <img src="./assets/media/About-us/Icon.png" alt="">
+        <h2>Sandro Jvarsheishvili</h2>
+        <h3>Senior Copywriter</h3>
+      </div>
+      <div class="box">
+        <img src="./assets/media/About-us/Icon.png" alt="">
+        <h2>Sandro Jvarsheishvili</h2>
+        <h3>Social Media Community Manager</h3>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <section class="grid">
+      <div class="box">
+        <h3>Quick links</h3>
+        <a href="home.html"><i class="fas fa-angle-right"></i>Home</a>
+        <a href="laptops.html"><i class="fas fa-angle-right"></i>Laptops</a>
+        <a href="parts.html"><i class="fas fa-angle-right"></i>Parts</a>
+        <a href="monitors.html"><i class="fas fa-angle-right"></i>Monitors</a>
+        <a href="accessories.html"><i class="fas fa-angle-right"></i>Accessories</a>
+        <a href="games.html"><i class="fas fa-angle-right"></i>Games</a>
+        <a href="about.html"><i class="fas fa-angle-right"></i>About</a>
+      </div>
+
+      <div class="box">
+        <h3>Account Information</h3>
+        <button class="loginLink" href="login.html"><i class="fas fa-angle-right"></i> Login</button>
+        <button class="registerLink" href="register.html"><i class="fas fa-angle-right"></i> Register</button>
+        <button class="orderLink"><i class="fas fa-angle-right"></i> Orders</button>
+        <button class="cartLink"><i class="fas fa-angle-right"></i> Cart</button>
+        <button class="wishlistLink"><i class="fas fa-angle-right"></i> Wishlist</button>
+      </div>
+
+      <div class="box">
+        <h3>Contact us</h3>
+        <a href="">Working Hours:</a>
+        <a href="">Weekdays: 9-6</a>
+        <a href="">Weekends: 10-5</a>
+        <a href="">info@computex.com</a>
+      </div>
+    </section>
+
+    <div class="credit">©Computex RETAIL LCC. All rights reserved</div>
+  </footer>
+
+</body>
+
+</html>
